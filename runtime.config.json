@@ -1,0 +1,37 @@
+{
+  "isDevelopment": true,
+  "server": {
+    "host": "127.0.0.1",
+    "port": "8080"
+  },
+  "mysql": {
+    "database": {
+      "todo": {
+        "wr": {
+          "dialect": "mysql",
+          "host": "127.0.0.1",
+          "port": 3306,
+          "user": "root",
+          "password": "nai6514531",
+          "database": "todo",
+          "maxIdle": 20,
+          "maxOpen": 20
+        }
+      }
+    }
+  },
+  "redis": {
+    "addr": "127.0.0.1:6379",
+    "password": "nai6514531",
+    "database": 9,
+    "prefix": "todo:",
+    "maxIdle": 20,
+    "maxActive": 50,
+    "idleTimeout": 60
+  },
+  "session": {
+    "secret": "todoSecret",
+    "maxAge": 100
+  },
+  "name": 456
+}
