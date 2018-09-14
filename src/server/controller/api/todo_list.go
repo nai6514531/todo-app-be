@@ -14,7 +14,6 @@ import (
 // 02表示表是toda
 var (
 	todoMsg = map[string]string{
-
 		"010200": "获取todo列表成功",
 	}
 )

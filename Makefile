@@ -13,10 +13,9 @@ prodConfig:
 	@NODE_ENV=${prodEnv} node -e "var cfg=require('config');console.log(JSON.stringify(cfg, null, 2))" > ${RUNTIME_CONFIG_FILE}.json
 
 # compile
-
-binary: config
-	@CGO_ENABLED=0 GOOS=linux GOARCH=amd64 ${GO} build -o ${BINARY_NAME}
-
+# darwin -> macos linux
+binary: prodConfig
+	@CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 ${GO} build -o ${BINARY_NAME}
 
 # server
 development: devConfig 

@@ -31,7 +31,7 @@
   },
   "session": {
     "secret": "todoSecret",
-    "maxAge": 100
+    "maxAge": 10000
   },
   "name": 456
 }

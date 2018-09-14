@@ -45,7 +45,7 @@ func Api(r *gin.Engine) {
 		session.Save()
 		c.JSON(200, gin.H{"count": count})
 	})
-
-	api.GET("/ping", todo.GetList)
-
+	api.GET("/profile", user.GetProfile)
+	api.GET("/todo-list", todo.GetList)
+	api.POST("/logout", user.Logout)
 }
