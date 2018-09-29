@@ -1,15 +1,15 @@
 {
-  "isDevelopment": true,
+  "isDevelopment": false,
   "server": {
-    "host": "127.0.0.1",
-    "port": "8080"
+    "host": "0.0.0.0",
+    "port": "80"
   },
   "mysql": {
     "database": {
       "todo": {
         "wr": {
           "dialect": "mysql",
-          "host": "127.0.0.1",
+          "host": "111.231.92.63",
           "port": 3306,
           "user": "root",
           "password": "nai6514531",
@@ -21,7 +21,7 @@
     }
   },
   "redis": {
-    "addr": "127.0.0.1:6379",
+    "addr": "111.231.92.63:6379",
     "password": "nai6514531",
     "database": 9,
     "prefix": "todo:",
@@ -32,6 +32,5 @@
   "session": {
     "secret": "todoSecret",
     "maxAge": 10000
-  },
-  "name": 456
+  }
 }

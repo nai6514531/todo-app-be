@@ -15,7 +15,7 @@ prodConfig:
 # compile
 # darwin -> macos linux
 binary: prodConfig
-	@CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 ${GO} build -o ${BINARY_NAME}
+	@CGO_ENABLED=0 GOOS=linux GOARCH=amd64 ${GO} build -ldflags "-w -s" -o ${BINARY_NAME}
 
 # server
 development: devConfig 

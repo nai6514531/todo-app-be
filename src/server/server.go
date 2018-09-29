@@ -14,6 +14,7 @@ func SetUpServer() {
 	r := gin.New()
 	// r.Use(favicon.New("./src/static/favicon.ico"))
 	r.Use(static.Serve("/", static.LocalFile("./src/static/", false)))
+	r.StaticFile("/favicon.ico", "./src/static/favicon.ico")
 	r.LoadHTMLGlob(indexHtml)
 	r.NoRoute(func(c *gin.Context) {
 		c.File(indexHtml)
